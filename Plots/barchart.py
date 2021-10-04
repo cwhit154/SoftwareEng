@@ -18,6 +18,7 @@ new_df = filtered_df.groupby(['State'])['Confirmed'].sum().reset_index()
 new_df = new_df.sort_values(by=['Confirmed'], ascending=[False]).head(20)
 
 # Preparing data
+#
 data = [go.Bar(x=new_df['State'], y=new_df['Confirmed'])]
 
 # Preparing layout
