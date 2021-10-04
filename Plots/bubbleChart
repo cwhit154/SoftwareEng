@@ -17,6 +17,8 @@ new_df = df.groupby(['Country']).agg(
     {'Confirmed': 'sum', 'Recovered': 'sum', 'Unrecovered': 'sum'}).reset_index()
 
 # Preparing data
+# sets the color and size of the bubbles, the larger the bubble, the larger quanity of cases
+# the color of the bubble represents the highest point of the bubble
 data = [
     go.Scatter(x=new_df['Recovered'],
                y=new_df['Unrecovered'],

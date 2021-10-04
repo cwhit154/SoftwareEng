@@ -6,6 +6,7 @@ import pandas as pd
 df = pd.read_csv('../Datasets/CoronaTimeSeries.csv')
 
 # Preparing data
+#Displays the days on the x axis, week of month on the y, and displays recovred cases
 data = [go.Heatmap(x=df['Day'],
                    y=df['WeekofMonth'],
                    z=df['Recovered'].values.tolist(),

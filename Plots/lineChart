@@ -7,6 +7,7 @@ df = pd.read_csv('../Datasets/CoronaTimeSeries.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 
 # Preparing data
+# sets the x axis to date, y to confimred, mode selects line as the chart, name sets the name of the entire chart
 data = [go.Scatter(x=df['Date'], y=df['Confirmed'], mode='lines', name='Death')]
 
 # Preparing layout
